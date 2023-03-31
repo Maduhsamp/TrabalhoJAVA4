@@ -1,0 +1,121 @@
+aplicativo de classe  pública {
+    public  static  void  principal ( String [] args ) {
+        Liquidificador  liquidificador = novo  Liquidificador ();
+        Microondas  microondas = novo  Microondas ();
+        Geladeira  geladeira = nova  Geladeira ();
+
+        Cozinha  cozinha = Cozinha nova  ( liquidificador , microondas , geladeira );
+
+        Sistema . fora . println ( liquidificador . observe ());
+        Sistema . fora . println ( microondas . observar ());
+        Sistema . fora . println ( geladeira . observar ());
+
+        cozinha . ligar ();
+
+        Sistema . fora . println ( liquidificador . observe ());
+        Sistema . fora . println ( microondas . observar ());
+        Sistema . fora . println ( geladeira . observar ());
+
+        cozinha . desligar ();
+
+        Sistema . fora . println ( liquidificador . observe ());
+        Sistema . fora . println ( microondas . observar ());
+        Sistema . fora . println ( geladeira . observar ());
+    }
+}
+
+aula  publica Cozinha {
+     Liquidificador  privado liquidificador ;
+     Microondas  microondas privado ;
+     geladeira Geladeira  privativa ;
+
+     Cozinha pública ( Liquidificador  liquidificador , Microondas  microondas , Geladeira  geladeira ) {
+        isso . liquidificador = liquidificador ;
+        isso . microondas = microondas ;
+        isso . geladeira = geladeira ;
+    }
+
+    public  void  ligar () {
+        isso . liquidificador . ligar ();
+        isso . microondas . ligar ();
+        isso . geladeira . ligar ();
+    }
+
+    public  void  desligar () {
+        isso . liquidificador . desligar ();
+        isso . microondas . desligar ();
+        isso . geladeira . desligar ();
+    }
+}
+
+public  class  Geladeira {
+    privado  booleano  ligado ;
+
+    public  void  ligar () {
+        isso . ligado = verdadeiro ;
+    }
+
+    public  void  desligar () {
+        isso . ligado = falso ;
+    }
+
+    public  boolean  isLigado () {
+        devolva  isso . ligado ;
+    }
+
+    public  String  observar () {
+        if ( this . ligado ) {
+            return  "Geladeira ligada" ;
+        } senão {
+            return  "Geladeira desafios" ;
+        }
+    }
+}
+
+public  class  Liquidificador {
+    privado  booleano  ligado ;
+
+    public  void  ligar () {
+        isso . ligado = verdadeiro ;
+    }
+
+    public  void  desligar () {
+        isso . ligado = falso ;
+    }
+
+    public  boolean  isLigado () {
+        devolva  isso . ligado ;
+    }
+
+    public  String  observar () {
+        if ( this . ligado ) {
+            return  "Liquidificador ligado" ;
+        } senão {
+            return  "Liquidificador desligado" ;
+        }
+    }
+}
+
+public  class  Microondas {
+    privado  booleano  ligado ;
+
+    public  void  ligar () {
+        isso . ligado = verdadeiro ;
+    }
+
+    public  void  desligar () {
+        isso . ligado = falso ;
+    }
+
+    public  boolean  isLigado () {
+        devolva  isso . ligado ;
+    }
+
+    public  String  observar () {
+        if ( this . ligado ) {
+            return  "Microondas ligadas" ;
+        } senão {
+            return  "Microondas desligadas" ;
+        }
+    }
+}
