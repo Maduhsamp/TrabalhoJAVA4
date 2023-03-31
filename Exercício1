@@ -1,0 +1,58 @@
+public  class  AppTrabalho {
+    public  static  void  principal ( String [] args ){
+        Dispositivo  dispositivo1 = new  Dispositivo ( 1 , "Notebook" );
+        Dispositivo  dispositivo2 = novo  Dispositivo ( 2 , "Desktop" );
+
+        Usuario  usuario1 = new  Usuario ( 1 , "Theodoro" );
+        Usuario  usuario2 = new  Usuario ( 2 , "Ana" );
+
+        usuario1 . setDispositivo ( dispositivo1 );
+        dispositivo1 . setUsuario ( usuario1 );
+        usuario1 . trabalhar ();
+        usuario2 . setDispositivo ( dispositivo2 );
+        dispositivo2 . setUsuario ( usuario2 );
+        usuario2 . trabalhar ();
+    }
+}
+
+public  class  Dispositivo {
+     codigo int  privado ;
+     string  privada nome ;
+     usuario  privado usuario ;
+
+    Dispositivo ( int  codigo , String  nome ){
+        isso . código = código ;
+        isso . nome = nome ;
+    }
+
+    public  void  setUsuario ( Usuario  usuario ){
+        isso . usuario = usuario ;
+    }
+
+    public  void  usar (){
+        Sistema . fora . println ( usuário . getNome () + "está usando o dispositivo" + nome );
+    }
+}
+
+public  class  Usuário {
+     string  privada nome ;
+     matrícula privada int  ;
+     dispositivo  privado dispositivo ;
+
+    Usuario ( int  matrícula , String  nome ){
+        isso . matricula = matricula ;
+        isso . nome = nome ;
+    }
+
+    public  String  getNome (){
+         nome de retorno ;
+    }
+
+    public  void  setDispositivo ( Dispositivo  dispositivo ){
+        isso . dispositivo = dispositivo ;
+    }
+
+    public  void  trabalhar (){
+        dispositivo . usar ();
+    }
+}
