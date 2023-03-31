@@ -1,0 +1,93 @@
+public  class  Bancos {
+     bancos privados String  ;
+     fabricante privado de cordas  ;
+
+    Bancos ( String  bancos , String  fabricante ){
+        isso . bancos = bancos ;
+        isso . fabricante = fabricante ;
+    }
+
+    public  String  getBancos (){
+         bancos de retorno ;
+    }
+
+    public  String  getFabricante (){
+        devolver  fabricante ;
+    }
+}
+
+public  class  Carro {
+     string  privada marca ;
+     modelo String  privado ;
+     Motor  privado motor ;
+     Bancos  privados ; _
+
+    Carro ( String  marca , String  modelo , Motor  motor , Bancos  bancos ){
+        isso . marca = marca ;
+        isso . modelo = modelo ;
+        isso . motor = motor ;
+        isso . bancos = bancos ;
+    }
+
+    public  String  getMarca (){
+         marca de retorno ;
+    }
+    public  String  getModelo (){
+         modelo de retorno ;
+    }
+    public  String  getTipoFabricante (){
+        devolver  bancos . getFabricante ();
+    }
+    public  String  getTipoMotor (){
+         motor de retorno . getTipo ();
+    }
+    public  String  getQuantBancos (){
+        devolver  bancos . obterBancos ();
+    }   
+}
+
+public  class  CarroApp {
+    public  static  void  main ( String [] args ) lança  exceção {
+        Motor  m1 = Motor novo  ( "3.8L V6" );
+        Bancos  b1 = new  Bancos ( "2" , "Ford" );
+        Carro  c1 = novo  Carro ( "Mustang" , "Conversível" , m1 , b1 );
+
+        Motor  m2 = Motor novo  ( "Zetec Roçam 1,0" );
+        Bancos  b2 = new  Bancos ( "4" , "Ford" );
+        Carro  c2 = novo  Carro ( "Ka" , "Popular" , m2 , b2 );
+
+        Motor  m3 = Motor novo  ( "2.4 Ecotec" );
+        Bancos  b3 = new  Bancos ( "4" , "Chevrolet" );
+        Carro  c3 = novo  Carro ( "Captiva" , "SUV" , m3 , b3 );
+
+        Sistema . fora . println ( c1 . getTipoFabricante () + " " +
+                            c1 . getMarca () + " " +
+                            c1 . getModelo () + " " +
+                            c1 . getTipoMotor () + " " +
+                            c1 . getQuantBancos ());
+
+        Sistema . fora . println ( c2 . getTipoFabricante () + " " +
+                            c2 . getMarca () + " " +
+                            c2 . getModelo () + " " +
+                            c2 . getTipoMotor () + " " +
+                            c2 . getQuantBancos ());
+
+        Sistema . fora . println ( c3 . getTipoFabricante () + " " +
+                            c3 . getMarca () + " " +
+                            c3 . getModelo () + " " +
+                            c3 . getTipoMotor () + " " +
+                            c3 . getQuantBancos ());
+    }
+}
+
+classe  Motor {
+     string  privada tipo ;
+
+    Motor ( tipo String  ){
+        isso . tipo = tipo ;
+    }
+
+    public  String  getTipo (){
+         tipo de retorno ;
+    }
+}
