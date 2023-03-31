@@ -79,15 +79,3 @@ public  class  CarroApp {
                             c3 . getQuantBancos ());
     }
 }
-
-classe  Motor {
-     string  privada tipo ;
-
-    Motor ( tipo String  ){
-        isso . tipo = tipo ;
-    }
-
-    public  String  getTipo (){
-         tipo de retorno ;
-    }
-}
