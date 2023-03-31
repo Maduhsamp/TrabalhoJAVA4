@@ -1,0 +1,51 @@
+public  class  Carro {
+     string  privada marca ;
+     modelo String  privado ;
+     fabricante privado de cordas  ;
+     Motor  privado motor ;
+     contador int estático  privado = 0 ; //não obrigatório 
+
+    Carro ( String  marca , String  modelo , String  fabricante , Motor  motor ){
+        isso . marca = marca ;
+        isso . modelo = modelo ;
+        isso . motor = motor ;
+        isso . fabricante = fabricante ;
+    }
+
+    @ Substituir
+    public  String  toString (){
+        contador ++; //não obrigatório
+        return  "Carro" + contador + " [Marca: " + marca + ", Modelo: " + modelo + ", Fabricante: " 
+        + fabricante + ", Motor: " + motor . getTipo () + "]" ;
+    }
+}
+
+public  class  CarroApp {
+    public  static  void  main ( String [] args ) lança  exceção {
+        Motor  m1 = Motor novo  ( "3.8L V6" );
+        Carro  c1 = Carro novo  ( "Mustang" , "Conversível" , "Ford" , m1 );
+
+        Motor  m2 = Motor novo  ( "Zetec Roçam 1,0" );
+        Carro  c2 = novo  Carro ( "Ka" , "Popular" , "Ford" , m2 );
+
+        Motor  m3 = Motor novo  ( "2.4 Ecotec" );
+        Carro  c3 = novo  Carro ( "Captiva" , "SUV" , "Chevrolet" , m3 );
+
+        Sistema . fora . println ( c1 . toString ());
+
+        Sistema . fora . println ( c2 . toString ());
+
+        Sistema . fora . println ( c3 . toString ());
+    }
+}
+
+classe  pública Motor {
+     string  privada tipo ;
+
+    Motor ( tipo String  ){
+        isso . tipo = tipo ;
+    }
+    public  String  getTipo (){
+         tipo de retorno ;
+    }
+}
